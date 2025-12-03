@@ -103,4 +103,9 @@ app.delete("/logs", (req, res) => {
   res.json({ message: "Logs cleared" });
 });
 
-app.listen(5000, '0.0.0.0', () => console.log("Backend Gemini running on port 5000"));
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Backend Gemini running on port ${PORT}`);
+});
+
